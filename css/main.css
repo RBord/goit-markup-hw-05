@@ -203,6 +203,7 @@ a {
     display: block;
     margin: 0 auto;
     padding: 10px 32px;
+    cursor: pointer;
     
     min-width: 200px;
     font-weight: 700;
@@ -618,4 +619,46 @@ margin-right: 8px;
 }
 .pottfolio__bot-list .list-link:hover .text-on-img-portfolio {
     opacity: 1;
+}
+.backdrop {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.modal {
+    position: absolute;
+    min-width: 528px;
+    min-height: 581px;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+
+    background-color: var(--primary-background-color);
+}
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+.modal-button {
+    position: absolute;
+    top:0;
+    right: 0;
+    cursor: pointer;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 8px;
 }
